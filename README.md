@@ -1,12 +1,41 @@
-# React + Vite
+GitHub repo:- https://github.com/AshishNikhil/Niroggyan-Healthcare-Appointment
+website:- https://healthcare-appointment-niro.netlify.app/
+Tools/libraries used are React, React Router DOM, React Calendar, Tailwind CSS, React Loader Spinner, and a custom useDoctors hook.
+Improvements With more time: enhance the UI, implement backend and deploy full stack, add time and calendar slots based on doctor availability.
+Challenges Faced and Solutions:
+  1.Managing doctor data without a backend:
+    Solution: Used a custom useDoctors hook to simulate data fetching.
+  
+  2.Avoiding prop drilling across components:
+    Solution: Used useParams and route-based dynamic rendering.
+  
+  3.Responsive UI across devices:
+    Solution: Applied Tailwind CSS with responsive utilities (sm:, md:, etc.).
+  
+  4.Lack of persistent appointment data:
+    Solution: Temporarily stored appointments in local state with plans for localStorage or backend integration.
+  
+  5.User-friendly date selection and validation:
+    Solution: Used react-calendar and set minDate to block past dates.
+  
+  6.Modal behavior and UX consistency:
+  Solution: Created a full-screen, accessible modal with clean transitions.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Future Goals:
+  1.Learn and integrate TypeScript for better code structure and type safety.
+  2.Deploy the full-stack application with both frontend and backend connected.
+  3.Implement real-time doctor availability with calendar and time slot booking.
 
-Currently, two official plugins are available:
+I have done Full Stack and it can be run locally
+GitHub Repo:- https://github.com/AshishNikhil/Doctor-appointment-frontend-backend
+to run frontend
+cd frontend/
+npm install
+npm run dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+to run backend
+cd backend/
+npm install
+node server.js
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Thank you for the opportunity
