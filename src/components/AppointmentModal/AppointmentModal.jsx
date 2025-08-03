@@ -22,8 +22,8 @@ const AppointmentModal = ({ doctor, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/30 backdrop-blur-sm flex items-center justify-center">
-      <div className="bg-white rounded-lg shadow-lg w-full max-w-lg p-6 relative">
+    <div className="fixed inset-0 z-50 bg-black/30 backdrop-blur-sm flex items-center justify-center px-4">
+      <div className="bg-white rounded-lg shadow-lg w-full max-w-lg p-6 sm:p-8 relative">
         <h3 className="text-2xl font-bold text-[#147aa3] mb-4 text-center">
           Book Appointment with {doctor.name}
         </h3>
@@ -66,17 +66,17 @@ const AppointmentModal = ({ doctor, onClose }) => {
             />
           </div>
 
-          <div className="flex justify-end space-x-3 pt-4">
+          <div className="flex flex-col sm:flex-row justify-end sm:space-x-3 space-y-3 sm:space-y-0 pt-4">
             <button
               type="button"
               onClick={onClose}
-              className="px-4 py-2 text-gray-700 border border-gray-300 rounded-md hover:bg-gray-100 transition"
+              className="w-full sm:w-auto px-4 py-2 text-gray-700 border border-gray-300 rounded-md hover:bg-gray-100 transition"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="px-4 py-2 bg-[#147aa3] text-white font-semibold rounded-md hover:bg-[#0f5e7d] transition"
+              className="w-full sm:w-auto px-4 py-2 bg-[#147aa3] text-white font-semibold rounded-md hover:bg-[#0f5e7d] transition"
             >
               Confirm Appointment
             </button>

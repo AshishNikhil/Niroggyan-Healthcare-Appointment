@@ -16,14 +16,14 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow p-6 bg-gray-50">
+      <main className="flex-grow p-4 sm:p-6 bg-gray-50">
         <div className="max-w-2xl mx-auto mb-6">
           <input
             type="text"
             placeholder="Search doctors..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#41B4E4]"
           />
         </div>
 
@@ -31,7 +31,7 @@ const Home = () => {
           {filteredDoctors.map((doc) => (
             <div
               key={doc.id}
-              className="bg-white border border-gray-200 rounded-2xl p-4 shadow transition duration-300 hover:shadow-xl hover:border-blue-500"
+              className="bg-white border border-gray-200 rounded-2xl p-4 shadow transition duration-300 hover:shadow-xl hover:border-[#41B4E4]"
             >
               <img
                 src={doc.image}
@@ -40,16 +40,12 @@ const Home = () => {
               />
               <h2 className="text-xl font-semibold text-gray-800">{doc.name}</h2>
               <p className="text-gray-600">{doc.specialization}</p>
-              <p
-                className={`mt-1 font-medium ${
-                  doc.available ? "text-green-600" : "text-red-500"
-                }`}
-              >
+              <p className={`mt-1 font-medium ${doc.available ? "text-green-600" : "text-red-500"}`}>
                 {doc.available ? "Available" : "Unavailable"}
               </p>
               <Link
                 to={`/doctor/${doc.id}`}
-                className="inline-block mt-4 px-4 py-2 bg-[#147aa3] text-white font-medium rounded-md transition duration-300 hover:bg-[#0f5e7d]"
+                className="inline-block mt-4 w-full text-center px-4 py-2 bg-[#147aa3] text-white font-medium rounded-md transition duration-300 hover:bg-[#0f5e7d]"
               >
                 View Profile
               </Link>

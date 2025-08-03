@@ -35,34 +35,36 @@ const DoctorProfile = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow p-6 bg-gray-50 min-h-screen">
-        <div className="max-w-3xl mx-auto bg-white shadow-md rounded-xl p-6">
-          <div className="flex flex-col items-center text-center">
+      <main className="flex-grow p-4 sm:p-6 bg-gray-50">
+        <div className="max-w-3xl mx-auto bg-white shadow-md rounded-xl p-4 sm:p-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6 text-center sm:text-left">
             <img
               src={doctor.image || "/default-doctor.png"}
               alt={doctor.name}
-              className="w-40 h-40 object-cover rounded-full mb-4"
+              className="w-32 h-32 sm:w-40 sm:h-40 object-cover rounded-full mb-4 sm:mb-0"
             />
-            <h2 className="text-2xl font-bold text-gray-800 mb-1">{doctor.name}</h2>
-            <p className="text-gray-600 font-medium">{doctor.specialization}</p>
-            <p className="text-gray-500 mt-3">{doctor.bio}</p>
-            <p className={`mt-2 font-semibold ${doctor.available ? "text-green-600" : "text-red-500"}`}>
-              Availability: {doctor.available ? "Available" : "Unavailable"}
-            </p>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-800 mb-1">{doctor.name}</h2>
+              <p className="text-gray-600 font-medium">{doctor.specialization}</p>
+              <p className="text-gray-500 mt-2">{doctor.bio}</p>
+              <p className={`mt-2 font-semibold ${doctor.available ? "text-green-600" : "text-red-500"}`}>
+                Availability: {doctor.available ? "Available" : "Unavailable"}
+              </p>
+            </div>
           </div>
 
-          <div className="flex justify-center gap-4 mt-6">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6">
             {doctor.available && (
               <button
                 onClick={() => setShowModal(true)}
-                className="px-6 py-2 bg-[#147aa3] text-white rounded-md font-semibold hover:bg-[#0f5e7d] transition"
+                className="w-full sm:w-auto px-6 py-2 bg-[#147aa3] text-white rounded-md font-semibold hover:bg-[#0f5e7d] transition"
               >
                 Book Appointment
               </button>
             )}
             <button
               onClick={() => navigate("/")}
-              className="px-6 py-2 border border-gray-300 text-gray-700 rounded-md font-medium hover:bg-gray-100 transition"
+              className="w-full sm:w-auto px-6 py-2 border border-gray-300 text-gray-700 rounded-md font-medium hover:bg-gray-100 transition"
             >
               Back
             </button>
